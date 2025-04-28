@@ -16,19 +16,31 @@
         <div><button class="btn-start" id="btnStart">LET'S GO!</button></div>
         
     </div>
-    <section>
+    <div class="quiz-container-hidden">
         <div class="quizProgress" id="progress">
             <div class="progressBar"></div>
         </div>
         
         <div class="quiz" id="questions">
-
+            <h5>Question</h5>
         </div>
         <div class="answers" id="answers">
-
+            <div class="option-check"> <input class="btn-choices" type="radio" name="choices" id="choice-1"> <label for="choice-1"></label></div>
+            <div class="option-check"> <input class="btn-choices" type="radio" name="choices" id="choice-1"> <label for="choice-1"></label></div>
+            <div class="option-check"> <input class="btn-choices" type="radio" name="choices" id="choice-1"> <label for="choice-1"></label></div>
+            <div class="option-check"> <input class="btn-choices" type="radio" name="choices" id="choice-1"> <label for="choice-1"></label></div>
+            
         </div>
+        <div>
+        <button class="btn-previous">PREVIOUS </button>
         <button class="btn-next" onclick="next()"> NEXT </button>
-    </section>
+        </div>
+    </div>
+    <div class="end-quiz">
+        <h3>TOTAL SCORE:</h3>
+        <h1>THE END !</h1>
+        <button class="btn-restart">START OVER</button>
+    </div>
 
     <script src = script.js></script>
 </body>

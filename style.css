@@ -19,7 +19,7 @@ header{
     width: 100px;
     font-weight: 1000;
     margin-top: 2%;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
 }
 
 .btn-next{
@@ -28,6 +28,26 @@ header{
     border: none;
     height: 30px;
     width: 100px;
+    font-weight: 1000;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+.btn-previous{
+    border-radius: 5px;
+    background-color: rgb(253, 60, 34);
+    border: none;
+    height: 30px;
+    width: 100px;
+    font-weight: 1000;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+.btn-restart{
+    border-radius: 5px;
+    background-color: rgb(5, 224, 235);
+    border: none;
+    height: 30px;
+    width: 150px;
     font-weight: 1000;
     margin-top: 2%;
     margin-bottom: 5%;
