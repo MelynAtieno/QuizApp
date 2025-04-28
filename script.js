@@ -12,4 +12,11 @@ fetch(api_url)
         return response.json();
     })
 
+function handleProgress(){
+    questions.forEach((question) => {
+        quizProgress.innerHTML += `<span></span>`
+    })
+}
+handleProgress()
+
 
