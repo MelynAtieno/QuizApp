@@ -21,10 +21,10 @@
             <div class="progressBar"></div>
         </div>
         
-        <div class="quiz" id="questions">
-            <h5>Question</h5>
+        <div class="quiz" id="question">
+            <h3>Question</h3>
         </div>
-        <div class="answers" id="answers">
+        <div class="answers" id="answer">
             <div class="option-check"> <input class="btn-choices" type="radio" name="choices" id="choice-1"> <label for="choice-1"></label></div>
             <div class="option-check"> <input class="btn-choices" type="radio" name="choices" id="choice-1"> <label for="choice-1"></label></div>
             <div class="option-check"> <input class="btn-choices" type="radio" name="choices" id="choice-1"> <label for="choice-1"></label></div>
@@ -32,8 +32,8 @@
             
         </div>
         <div>
-        <button class="btn-previous">PREVIOUS </button>
-        <button class="btn-next" onclick="next()"> NEXT </button>
+        <button class="btn-previous" id="previous-question">PREVIOUS </button>
+        <button class="btn-next" id="next-question" onclick="next()"> NEXT </button>
         </div>
     </div>
     <div class="end-quiz">
