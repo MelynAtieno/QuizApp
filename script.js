@@ -40,12 +40,19 @@ function displayQuestion(index){
 
 }
 
-nextBtn.addEventListener("click",()=>{
+nextBtn.addEventListener("click",() => {
     if(currentQuestionIndex < quizzes.length - 1){
         currentQuestionIndex++;
         displayQuestion(currentQuestionIndex)
     }
 });
+
+previousBtn.addEventListener("click", () => {
+    if(currentQuestionIndex > 0){
+        currentQuestionIndex--;
+        displayQuestion(currentQuestionIndex)
+    }
+})
 
 
 
