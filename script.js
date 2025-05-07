@@ -1,6 +1,7 @@
 const api_url = "https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=multiple"
 const quizContainer = document.getElementById("quiz-container")
 const progress = document.getElementById("progress")
+const quizNumber = document.getElementById("question-number")
 const questionText = document.getElementById("questionText")
 const answersText = document.getElementById("answer")
 const nextBtn = document.getElementById("next-question")
@@ -18,6 +19,7 @@ fetch(api_url)
 
 function displayQuestion(index){
     const q = quizzes[index];
+    quizNumber.textContent = `Question ${index + 1}`;
     questionText.innerHTML = q.question;
 
 }
