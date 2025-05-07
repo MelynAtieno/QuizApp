@@ -38,8 +38,14 @@ function displayQuestion(index){
     previousBtn.disabled = index === 0;
     nextBtn.disabled = index === quizzes.length - 1;
 
-
 }
+
+nextBtn.addEventListener("click",()=>{
+    if(currentQuestionIndex < quizzes.length - 1){
+        currentQuestionIndex++;
+        displayQuestion(currentQuestionIndex)
+    }
+});
 
 
 
