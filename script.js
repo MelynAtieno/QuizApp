@@ -22,6 +22,23 @@ function displayQuestion(index){
     quizNumber.textContent = `Question ${index + 1}`;
     questionText.innerHTML = q.question;
 
+
+    const answers = [...q.incorrect_answers, q.correct_answer];
+    answers.sort(() => Math.random() - 0.5);
+
+    const optionChecks = document.querySelectorAll('.option-check');
+    answers.forEach((answer, i) =>{
+        const input = optionChecks[i].querySelector('input');
+        const label = optionChecks[i].querySelector('label');
+
+        input.value = answer;
+        label.innerHTML = answer;
+        input.checked = false;
+});
+    previousBtn.disabled = index === 0;
+    nextBtn.disabled = index === quizzes.length - 1;
+
+
 }
 
 
