@@ -91,7 +91,11 @@ submitBtn.addEventListener("click", () => {
     }, 0);
 
     quizContainer.innerHTML = 
-        `<h3>TOTAL SCORE: ${score}</h3>`;
+        `<h1>THE END !</h1>
+         <h3>TOTAL SCORE: ${score}/${quizzes.length}</h3>`;
+    
+    previousBtn.style.display = "none";
+    submitBtn.style.display = "none";
 })
 
 
