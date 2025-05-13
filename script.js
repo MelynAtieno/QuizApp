@@ -39,6 +39,14 @@ function displayQuestion(index){
     previousBtn.disabled = index === 0;
     nextBtn.disabled = index === quizzes.length - 1;
 
+    if(index === quizzes.length - 1){
+        nextBtn.style.display = "none";
+        submitBtn.style.display = 'inline-block';
+    }else{
+        nextBtn.style.display = 'inline-block';
+        submitBtn.style.display = 'none';
+    }
+
 }
 
 nextBtn.addEventListener("click",() => {
@@ -53,7 +61,10 @@ previousBtn.addEventListener("click", () => {
         currentQuestionIndex--;
         displayQuestion(currentQuestionIndex)
     }
-})
+});
+
+
+
 
 
 
