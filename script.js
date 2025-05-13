@@ -1,4 +1,5 @@
 const api_url = "https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=multiple"
+const categoryContainer = document.getElementById("category-container")
 const quizContainer = document.getElementById("quiz-container")
 const progress = document.getElementById("progress")
 const quizNumber = document.getElementById("question-number")
@@ -7,6 +8,7 @@ const answersText = document.getElementById("answer")
 const nextBtn = document.getElementById("next-question")
 const previousBtn = document.getElementById("previous-question")
 const submitBtn = document.getElementById("submit")
+
 let currentQuestionIndex = 0;
 let score = 0;
 let  quizzes = [];
@@ -96,6 +98,7 @@ submitBtn.addEventListener("click", () => {
     
     previousBtn.style.display = "none";
     submitBtn.style.display = "none";
+    categoryContainer.style.display = "none";
 })
 
 
