@@ -10,6 +10,7 @@ const submitBtn = document.getElementById("submit")
 let currentQuestionIndex = 0;
 let score = 0;
 let  quizzes = [];
+let userAnswers = new Array(10).fill(null);
 
 fetch(api_url)
     .then(res => res.json())
@@ -42,14 +43,27 @@ function displayQuestion(index){
     if(index === quizzes.length - 1){
         nextBtn.style.display = "none";
         submitBtn.style.display = 'inline-block';
-    }else{
+    } else {
         nextBtn.style.display = 'inline-block';
         submitBtn.style.display = 'none';
+    }
+
+    const selectedAnswer = userAnswers[index];
+    if(selectedAnswer){
+        optionChecks.forEach(opt => {
+            const input = opt.querySelector('input');
+            input.checked = input.value === selectedAnswer;
+        });
     }
 
 }
 
 nextBtn.addEventListener("click",() => {
+    const selected = document.querySelector('input[name="choices"]:checked')
+    if(selected){
+        userAnswers[currentQuestionIndex] = selected.value;
+        }
+
     if(currentQuestionIndex < quizzes.length - 1){
         currentQuestionIndex++;
         displayQuestion(currentQuestionIndex)
@@ -63,7 +77,22 @@ previousBtn.addEventListener("click", () => {
     }
 });
 
+submitBtn.addEventListener("click", () => {
+    const selected = document.querySelector('input[name="choices"]:checked')
+    if(selected){
+        userAnswers[currentQuestionIndex] = selected.value;
+        }
+    
+    score = userAnswers.reduce((total, answer, i) =>{
+        if(answer === quizzes[i].correct_answer){
+            return total + 1;
+        }
+        return total
+    }, 0);
 
+    quizContainer.innerHTML = 
+        `<h3>TOTAL SCORE: ${score}</h3>`;
+})
 
 
 
