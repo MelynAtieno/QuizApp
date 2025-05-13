@@ -52,3 +52,14 @@ header{
     margin-top: 2%;
     margin-bottom: 5%;
 }
+
+.btn-submit{
+    border-radius: 5px;
+    background-color: rgb(3, 146, 69);
+    border: none;
+    height: 30px;
+    width: 100px;
+    font-weight: 1000;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}

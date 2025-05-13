@@ -6,6 +6,7 @@ const questionText = document.getElementById("questionText")
 const answersText = document.getElementById("answer")
 const nextBtn = document.getElementById("next-question")
 const previousBtn = document.getElementById("previous-question")
+const submitBtn = document.getElementById("submit")
 let currentQuestionIndex = 0;
 let score = 0;
 let  quizzes = [];
@@ -53,6 +54,10 @@ previousBtn.addEventListener("click", () => {
         displayQuestion(currentQuestionIndex)
     }
 })
+
+
+
+
 
 
 
